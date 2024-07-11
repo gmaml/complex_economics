@@ -1,8 +1,9 @@
 project:
   type: website
+  output-dir: docs
 
 website:
-  title: "Complex Economics"
+  title: "Complexity Economics"
   navbar:
     right:
       - about.qmd
