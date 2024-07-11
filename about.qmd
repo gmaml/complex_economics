@@ -16,4 +16,4 @@ about:
 
 ---
 
-About this blog
+This blog explore the ways to build in fiedeligy model for economy.  Departing from traditonal economic toy models with rational agents,   

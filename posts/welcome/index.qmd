@@ -5,7 +5,7 @@ date: "2024-07-08"
 categories: [news]
 ---
 
-This is the first post in a Quarto blog. Welcome!
+This is the first post in a Quarteo blog. Welcome!
 
 ![](thumbnail.jpg)
 
