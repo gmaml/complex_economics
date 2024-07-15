@@ -1,17 +1,17 @@
 [
   {
-    "objectID": "posts/post-with-code/index.html",
-    "href": "posts/post-with-code/index.html",
-    "title": "Post With Code",
+    "objectID": "posts/money_measure/index.html",
+    "href": "posts/money_measure/index.html",
+    "title": "Money Measurement",
     "section": "",
-    "text": "This is a post with executable code.\n\n1 + 1\n\n[1] 2"
+    "text": "Money measurement\nThe following link is a streamlit app to show money measurement.\nhttps://appapps-fbapmcvtmwbdfxncsxvgq3.streamlit.app/"
   },
   {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Complexity Economics",
     "section": "",
-    "text": "Complexity Economics with money production\n\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\n\n\nJul 15, 2024\n\n\nGang Ma\n\n\n\n\n\n\n  \n\n\n\n\nPost With Code\n\n\n\n\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\n\n\nJul 15, 2024\n\n\nHarlow Malloc\n\n\n\n\n\n\nNo matching items"
+    "text": "Complexity Economics with money production\n\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\n\n\nJul 15, 2024\n\n\nGang Ma\n\n\n\n\n\n\n  \n\n\n\n\nMoney Measurement\n\n\n\n\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\n\n\nJul 15, 2024\n\n\nGang Ma\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "about.html",
@@ -54,12 +54,5 @@
     "title": "Complexity Economics with money production",
     "section": "Conclusions",
     "text": "Conclusions\nRecent developments in AI and related fields have raised numerous intriguing questions for complexity economics. The flexibility inherent in complexity economics provides ample opportunities for exploration, but it also presents significant challenges. This open book will discuss both the findings and the problems that arise from this intersection of complexity economics and modern AI. We invite you to join us on this intellectual journey as we explore these cutting-edge ideas and their implications for our understanding of economic systems!\n\nSince this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
-  },
-  {
-    "objectID": "posts/money_measure/index.html",
-    "href": "posts/money_measure/index.html",
-    "title": "Post With Code",
-    "section": "",
-    "text": "Money measurement\nThe following link is a streamlit app to show money measurement.\nhttps://appapps-fbapmcvtmwbdfxncsxvgq3.streamlit.app/"
   }
 ]
