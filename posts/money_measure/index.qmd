@@ -3,7 +3,7 @@ title: "Money Measurement"
 author: "Gang Ma"
 date: "2024-07-15"
 categories: [news, code, analysis]
-image: "image.jpg"
+image: "dollars.jpg"
 ---
 
 Money measurement

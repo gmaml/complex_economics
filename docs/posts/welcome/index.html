@@ -22,7 +22,26 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -148,7 +167,7 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="introduction" class="level2">
 <h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
-<p>This blog discusses an open-source book on complexity economics with a focus on money production. Complexity economics, as beautifully described by Arthur, “builds from the proposition that the economy is not necessarily in equilibrium: economic agents (firms, consumers, investors) constantly change their actions and strategies in response to the outcome they mutually create.” This approach, where equilibrium is only a special case, potentially provides a broader framework to understand a richer array of economic phenomena. Additionally, it establishes a theoretical foundation for building realistic economic simulation models, improving forecasting, and enhancing policy recommendations. While there are numerous books and papers on complexity sciences and complexity economics, this new open book makes two key contributions:</p>
+<p>This blog discusses an open-source book on complexity economics with a focus on money production. Complexity economics, as beautifully described by Arthur<span class="citation" data-cites="arthur2013"><a href="#ref-arthur2013" role="doc-biblioref">[1]</a></span>, “builds from the proposition that the economy is not necessarily in equilibrium: economic agents (firms, consumers, investors) constantly change their actions and strategies in response to the outcome they mutually create.” This approach, where equilibrium is only a special case, potentially provides a broader framework to understand a richer array of economic phenomena. Additionally, it establishes a theoretical foundation for building realistic economic simulation models, improving forecasting, and enhancing policy recommendations. While there are numerous books and papers on complexity sciences and complexity economics, this new open book makes two key contributions:</p>
 <ol type="1">
 <li>It demonstrates that money is an integral component of complexity economics. Modern capitalist economies are inherently money economies. The concept of a money production economy originated with Keynes, who sought to build a new analytical framework to illustrate the importance of money. Complexity economics provides the ideal framework to fully express his intuitions.</li>
 <li>It incorporates recent developments in Artificial Intelligence (AI) into complexity economics. Complexity science, as a multidisciplinary approach, has always been inspired by advancements in AI. Pioneers in AI research, such as Simon and Holland, made significant contributions to the development of complexity sciences. With the recent resurgence of interest in AI, new research is emerging rapidly. Integrating these developments into the next generation of complexity economics is crucial, following the trend of using AI to enhance other scientific fields. This integration offers mutual benefits: if the ultimate goal of AI is to automatically build world models, then the economy is a vital part of that model.</li>
@@ -157,26 +176,50 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="money-production" class="level2">
 <h2 class="anchored" data-anchor-id="money-production">Money production</h2>
-<p>A fundamental axiom of complexity economics is radical uncertainty. This concept has a long history in economics, with Keynes being one of its prominent supporters.</p>
-<p>Ordinary people can easily grasp this axiom; for instance, we don’t know exactly how the recent AI revolution will impact our society. Keynes invoked fundamental uncertainty to explain money production in modern economies, demonstrating why money is important and not merely a veil. Significant efforts have been made to theorize Keynes’ insights, leading to various schools of thought: mainstream neoclassical and different flavors of post-Keynesian. Summarizing the status of each school, their evolution, and interactions is beyond our scope here, but references are provided for further exploration.</p>
-<p>It’s worth emphasizing that money-related problems have emerged periodically in recent decades, culminating in the severe 2008 financial crisis. This event inspired voluminous research investigating its causes, all elucidating the importance of money in the economy. For example, Mehrling’s (2011) “money view” showed the hierarchy of money and how specific economic agents maintain these hierarchies. The relationships between money at different hierarchies are called parities. The breakdown of these parities can cause violent disruptions in economic activities.</p>
-<p>Another notable example comes from King, a former governor of the Bank of England during the financial crisis, who emphasized radical uncertainty which is essentially the same as fundamental uncertainty.</p>
-<p>Complexity economics has acknowledged fundamental uncertainty as a first principle from its inception. Indeed, it’s of utmost importance to complexity economics in arguing for bounded rationality or non-defining rationality. The first complex economic models used these principles to study stock markets. In hindsight, considering the financial crisis, I believe that money is also a consequence of fundamental uncertainty. Complexity economics provides a useful framework to unite various strands of thought about money into a coherent system. At the risk of oversimplification, money or demand deposits are liabilities issued by banks, supported by loan portfolios and bank equity. Money is accepted as universal payment, while loans are IOUs from private borrowers to banks. This is typically called credit transformation. Another important feature of money is its relationship to the state, though this aspect requires further elaboration. Due to space limitations, we’ve only scratched the surface of money issues in complexity economics. Other important topics include how shadow banking grows from and symbiotically relates to the banking system, how interest rates work, how money relates to capital markets, and how money affects inflation and the real economy. While these topics have been extensively explored within other frameworks, I believe complexity economics potentially offers a more comprehensive understanding of these very important and complex issues. CopyRetry</p>
+<p>A fundamental axiom of complexity economics is radical uncertainty. This concept has a long history in economics, with Keynes being one of its prominent supporters.As John Maynard Keynes described this in 1937, “the prospect of a European war, the rate of interest twenty years hence … About these matters there is no scientific basis on which to form any calculable probability whatever. We simply do not know.”</p>
+<p>We can easily grasp this axiom; for instance, we don’t know exactly how the recent AI revolution will impact our society. Keynes invoked fundamental uncertainty to explain money production in modern economies, demonstrating why money is important and not merely a veil. Significant efforts have been made to theorize Keynes’ insights, leading to various schools of thought: mainstream neoclassical and different flavors of post-Keynesian. Summarizing the status of each school, their evolution, and interactions is beyond our scope here, but references are provided for further exploration.</p>
+<p>It’s worth emphasizing that money-related problems have emerged periodically in recent decades,<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> culminating in the severe 2008 financial crisis. This event inspired voluminous research investigating its causes, all elucidating the importance of money in the economy. For example, Mehrling’s (2011) “money view” showed the hierarchy of money and how specific economic agents maintain these hierarchies. The relationships between money at different hierarchies are called parities. The breakdown of these parities can cause violent disruptions in economic activities.</p>
+<p>Another notable example comes from King<span class="citation" data-cites="king_2016"><a href="#ref-king_2016" role="doc-biblioref">[2]</a></span>, a former governor of the Bank of England during the financial crisis, who emphasized radical uncertainty, which is essentially the same as fundamental uncertainty, is the most significant obstacle faced by central bankers to set interest rates.</p>
+<p>Complexity economics has acknowledged fundamental uncertainty as a first principle from its inception. Indeed, it’s of utmost importance to complexity economics in arguing for bounded rationality or non-defining rationality. The first complex economic models used these principles to study stock markets. Money, such as bank deposits are so stable that no further consideratios are needed. With the hindsight agined from financial crisis, I believe that money is also a consequence of fundamental uncertainty. Complexity economics provides a useful framework to unite various strands of thought about money into a coherent system.</p>
+<p>At the risk of oversimplification, money or demand deposits are liabilities issued by banks, supported by loan portfolios and bank equity. Money is accepted as the only universal payment method, while loans are IOUs from private borrowers to banks. This is typically called credit transformation. Another important feature of money is “the use of money must be so regulated as to give no privilege of seigniorage to any agent”<span class="citation" data-cites="graziani2003"><a href="#ref-graziani2003" role="doc-biblioref">[3]</a></span>. In general, currency is issued by central banks and its central banks’ responsibility to maintain parity between currency and bank deposit.</p>
+<p>Due to space limitations, we’ve only scratched the surface of money issues in complexity economics. Other important topics include how shadow banking grows from and symbiotically relates to the banking system, how interest rates work, how money relates to capital markets, and how money affects inflation and the real economy. While these topics have been extensively explored within other frameworks, I believe complexity economics potentially offers a more comprehensive understanding of these very important and complex issues.</p>
 </section>
 <section id="ai-developments" class="level2">
 <h2 class="anchored" data-anchor-id="ai-developments">AI developments</h2>
-<p>Complexity sciences, as a multidisciplinary field, have been inspired by AI research since their inception. For example, Herbert Simon’s concept of bounded rationality and John Holland’s genetic algorithms have been extensively used in complexity economics. Following this historical pattern, it is natural to expect that recent developments in AI will affect complexity economics at various levels. One major recent development in AI is deep learning, a type of machine learning particularly suitable for large-scale data analysis. These advancements are accompanied by improvements in computer hardware and software to manage and process large datasets. Complexity economics will undoubtedly benefit from such developments as it evolves to create higher-fidelity economic simulation models. Among deep learning models, deep graph neural networks are especially promising, as they can help complexity economics better understand complex network dynamics, another salient feature of complexity economics models. Despite deep learning’s remarkable success in natural language processing, text analysis, image recognition, and video processing, it suffers from several drawbacks. These include difficulties in adapting to new tasks, lack of robustness to unforeseen data, requirements for large training datasets, and limited causal understanding. Another strand of AI research, probabilistic machine learning, aims to overcome some of these drawbacks, although these models still need technical breakthroughs to efficiently compute with large amounts of data. New AI research paradigms have also emerged from other disciplines, such as cognitive sciences. Complexity economics may benefit from such research by incorporating insights to build more realistic agent models. These developments in AI offer exciting possibilities for advancing complexity economics, potentially leading to more sophisticated and accurate models of economic agent behaviors.</p>
+<p>Complexity sciences, as a multidisciplinary field, have been inspired by AI research since their inception. For example, Herbert Simon’s concept of bounded rationality and John Holland’s genetic algorithms have been extensively used in complexity economics. Following this historical pattern, it is natural to expect that recent developments in AI will affect complexity economics at various levels.</p>
+<p>One major recent development in AI is deep learning, a type of machine learning particularly suitable for large-scale data analysis. These advancements are accompanied by improvements in computer hardware and software to manage and process large datasets. Complexity economics will undoubtedly benefit from such developments as it evolves to create higher-fidelity economic simulation models. Among deep learning models, deep graph neural networks are especially promising, as they can help complexity economics better understand complex network dynamics, another salient feature of complexity economics models.</p>
+<p>Despite deep learning’s remarkable success in natural language processing, text analysis, image recognition, and video processing, it suffers from several drawbacks. These include difficulties in adapting to new tasks, lack of robustness to unforeseen data, requirements for large training datasets, and limited causal understanding.</p>
+<p>Another strand of AI research, probabilistic machine learning, aims to overcome some of these drawbacks, although these models still need technical breakthroughs to efficiently compute with large amounts of data. New AI research paradigms have also emerged from other disciplines, such as cognitive sciences. Complexity economics may benefit from such research by incorporating insights to build more realistic agent models. These developments in AI offer exciting possibilities for advancing complexity economics, potentially leading to more sophisticated and accurate models of economic agent behaviors.</p>
 </section>
 <section id="conclusions" class="level2">
 <h2 class="anchored" data-anchor-id="conclusions">Conclusions</h2>
 <p>Recent developments in AI and related fields have raised numerous intriguing questions for complexity economics. The flexibility inherent in complexity economics provides ample opportunities for exploration, but it also presents significant challenges. This open book will discuss both the findings and the problems that arise from this intersection of complexity economics and modern AI. We invite you to join us on this intellectual journey as we explore these cutting-edge ideas and their implications for our understanding of economic systems!</p>
 <p><img src="thumbnail.jpg" class="img-fluid"></p>
-<p>Since this post doesn’t specify an explicit <code>image</code>, the first image in the post will be used in the listing page of posts.</p>
+</section>
+<section id="references" class="level2">
+
+
 
 
 </section>
 
-</main> <!-- /main -->
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body" role="list">
+<div id="ref-arthur2013" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[1] </div><div class="csl-right-inline">W. B. Arthur, <span>“Complaxity economics: A different framework for economic thought,”</span> Santa Fe Institute, Working Paper 2013-04-012, 2013.</div>
+</div>
+<div id="ref-king_2016" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[2] </div><div class="csl-right-inline">K. Mervyn, <em>The end of alchemy: Money, banking, and the future of global economy</em>. Oxfor University, 2016.</div>
+</div>
+<div id="ref-graziani2003" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[3] </div><div class="csl-right-inline">A. Graziani, <em>The monetary theory of production</em>. Cambridge University Press, 2003.</div>
+</div>
+</div></section><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>Such as collapse of LTCM in 1998<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
