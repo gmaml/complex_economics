@@ -1,0 +1,319 @@
+---
+title: "Money Funding"
+author: "Gang Ma"
+date: "2024-07-16"
+categories: [news, code, analysis]
+image: "dollars.jpg"
+---
+
+# Introduction
+
+Capital investment is typically funded through two primary avenues: long-term savings and money market instruments. The long-term savings approach often involves institutional investors, such as pension funds, directly purchasing equity and debt instruments. This approach taps into the capital accumulated through long-term savings and investment horizons.
+
+In contrast, the money market instrument approach relies on shorter-term, more liquid vehicles like commercial paper, repurchase agreements, and money market funds. These instruments are continuously rolled over, providing a potentially cheaper source of funding compared to long-term savings.
+
+However, the money market instrument approach also introduces additional risks to the financial system. These "shadow banking" instruments, which include everything except traditional bank deposits, operate outside the traditional banking regulatory framework. This creates potential vulnerabilities, as shadow banking activities can destabilize the broader financial system if not properly monitored and managed.
+
+Despite the convenience that shadow banking instruments provide for capital investment, their growth and behavior are inextricably linked to the policies and regulations governing the traditional banking sector. Furthermore, central bank monetary policies can have significant impacts on the dynamics of both the banking and shadow banking systems.
+
+In this article, we will use sample transactions to clarify the differences among various funding avenues and pinpoint the exact risk sources. To keep the presentation focused, we will not delve into how central bank policies may affect these funding operations, but rather concentrate on the inherent trade-offs and risks associated with long-term savings and money market instruments.
+
+# Definition of Money
+
+In the context of this article, the term "money" encompasses a broader range of financial instruments beyond just traditional bank deposits. It includes so-called "shadow banking" instruments, such as:
+
+-   Repurchase agreements (repos)
+-   Money market mutual funds
+-   Eurodollar deposits
+-   Foreign exchange (FX) swaps
+
+# Economy
+
+For the purposes of this analysis, we will start with a simplified economy consisting of three primary agents: - Firms - Households - Banks This three-agent model provides a solid foundation for understanding the basic dynamics of capital investment funding. However, as the discussion progresses, we will expand the number of agents to include additional relevant entities, such as:
+
+-   Central banks
+-   Foreign banks
+-   Other financial institutions (e.g., shadow banking entities)
+
+# Our Analysis
+
+Our analysis of dollar-denominated capital investment funding will explore four distinct cases:
+
+-   Long-Term Savings Funding: This case examines the use of long-term savings, such as pension fund assets, to directly purchase equity and debt instruments for capital investment purposes.
+-   Bank Deposit Funding: The second case focuses on the use of traditional bank deposits to fund capital investments. This represents the core banking intermediation model.
+-   Shadow Banking Funding: Repurchase Agreements (Repos): The third case explores the utilization of a specific shadow banking instrument - repurchase agreements (repos) - to fund capital investments. Repos represent a crucial component of the shadow banking system.
+-   Shadow Banking Funding: Eurodollars and FX Swaps: The fourth case investigates the use of Eurodollar deposits and foreign exchange (FX) swaps as alternative shadow banking instruments for funding capital investments.
+
+By analyzing these four distinct cases, we can develop a comprehensive understanding of the various funding avenues available for dollar-denominated capital investments, as well as the unique characteristics, advantages, and risks associated with each approach.
+
+This structured analysis will allow us to compare and contrast the different funding mechanisms, highlighting the trade-offs, vulnerabilities, and potential systemic implications involved in the broader capital investment landscape.
+
+## Case 1: capital investments by long term saving
+
+In the first case, the long-term savings funding model, the firm issues bonds to raise capital for the purchase of capital goods. This setup aligns with the standard asset pricing literature frameworks.
+
+```{dot}
+digraph accounts_1 {
+    node [shape=plaintext]
+    firm_account[label=<
+    <TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4">
+    <TR><TD ALIGN="CENTER" COLSPAN="2">Firm</TD></TR><HR/>
+    <TR> <TD ALIGN="CENTER" > Asset</TD> <VR/>
+      <TD ALIGN="CENTER">Liability</TD>
+    </TR>
+    <TR><TD ALIGN="CENTER" PORT="firm"> Investment 100 </TD> <VR/><TD> Bond 100</TD></TR>
+    </TABLE>
+    >];
+
+    node [shape=plaintext]
+    household_account[label=<
+    <TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4">
+    <TR><TD ALIGN="CENTER" COLSPAN="2">Household</TD></TR><HR/>
+    <TR> <TD ALIGN="CENTER" > Asset</TD> <VR/>
+      <TD ALIGN="CENTER">Liability</TD>
+    </TR>
+    <TR><TD ALIGN="CENTER" PORT="house"> Bond 100 </TD> <VR/><TD> </TD></TR>
+    </TABLE>
+    >];
+
+    node [shape=plaintext]
+    bank_account[label=<
+    <TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4">
+    <TR><TD ALIGN="CENTER" COLSPAN="2">Bank</TD></TR><HR/>
+    <TR> <TD ALIGN="CENTER" > Asset</TD> <VR/>
+      <TD ALIGN="CENTER">Liability</TD>
+    </TR>
+    <TR><TD ALIGN="CENTER" PORT="bank"> </TD> <VR/><TD> </TD></TR>
+    </TABLE>
+    >];
+
+
+}
+```
+
+In the first case focusing on long-term savings funding, it may be misleading to suggest that the banking sector has no activity. According to the "money view" perspective outlined by Perry (2022), there is a critical role for "primary money" as the method of payment, rather than just bond transactions alone.
+
+Specifically, households would likely need access to money, in the form of bank deposits, in order to purchase the bonds issued by the firm. Similarly, the firm would require money to make payments to workers and to fund the capital investment. Therefore, the economy would rely on the banking system to provide loans that facilitate these necessary transactions and enable the flow of funds.
+
+As Perry (2022) explains, these bank loans represent a "flux and reflux of credit" that are ultimately paid off, leaving no residual bank deposits in the economy. We can further imagine how the balance sheets would change after the capital investment is made. There are two possibilities:
+
+-   If the investment generates \$10 in profits over the year, the firm could choose to pay \$10 in interest to the household. This would still require the banking system to issue the money to facilitate the interest payment.
+-   If the investment loses \$10 in value over the year, the bond value would decrease by the same amount. However, this loss of investment value would not necessarily lead to instability in the broader financial system.
+
+## Case 2: capital investment by bank loan
+
+In the second case, where bank deposits are used to fund the capital investments, the banking sector plays a more active role. The bank will expand its balance sheet by making a loan to the firm to facilitate the investment.
+
+The resulting balance sheets would be as follows:
+
+```{dot}
+digraph accounts_2 {
+    node [shape=plaintext]
+    firm_account[label=<
+    <TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4">
+    <TR><TD ALIGN="CENTER" COLSPAN="2">Firm</TD></TR><HR/>
+    <TR> <TD ALIGN="CENTER" > Asset</TD> <VR/>
+      <TD ALIGN="CENTER">Liability</TD>
+    </TR>
+    <TR><TD ALIGN="CENTER" PORT="firm"> Deposit +100 </TD> <VR/><TD> Loan +100</TD></TR>
+    <TR><TD ALIGN="CENTER" PORT="firm"> Deposit -100 </TD> <VR/><TD> </TD></TR>
+    <TR><TD ALIGN="CENTER" PORT="firm"> Investment +100 </TD> <VR/><TD> </TD></TR>
+        
+    </TABLE>
+    >];
+
+    node [shape=plaintext]
+    household_account[label=<
+    <TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4">
+    <TR><TD ALIGN="CENTER" COLSPAN="2">Household</TD></TR><HR/>
+    <TR> <TD ALIGN="CENTER" > Asset</TD> <VR/>
+      <TD ALIGN="CENTER">Liability</TD>
+    </TR>
+    <TR><TD ALIGN="CENTER" PORT="house"> Deposit +100 </TD> <VR/><TD> </TD></TR>
+    <TR><TD ALIGN="CENTER" PORT="house">  </TD> <VR/><TD> </TD></TR>
+    <TR><TD ALIGN="CENTER" PORT="house">  </TD> <VR/><TD> </TD></TR>
+    
+    </TABLE>
+    >];
+
+    node [shape=plaintext]
+    bank_account[label=<
+    <TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4">
+    <TR><TD ALIGN="CENTER" COLSPAN="2">Bank</TD></TR><HR/>
+    <TR> <TD ALIGN="CENTER" > Asset</TD> <VR/>
+      <TD ALIGN="CENTER">Liability</TD>
+    </TR>
+    <TR><TD ALIGN="CENTER" PORT="bank"> Loan +100 </TD> <VR/><TD> Deposit +100 </TD></TR>
+    <TR><TD ALIGN="CENTER" PORT="bank">  </TD> <VR/><TD> </TD></TR>
+    <TR><TD ALIGN="CENTER" PORT="bank">  </TD> <VR/><TD> </TD></TR>
+    
+    </TABLE>
+    >];
+
+    {rank=same; firm_account household_account bank_account}
+
+
+}
+```
+
+Similar to Case 1, we will omit the explicit creation of money by the bank to facilitate transactions, in order to maintain clarity.
+
+In this second case, we demonstrate that the firm obtains a loan from the bank, thereby acquiring a bank deposit. The firm then uses this deposit to pay the household for the inputs required to produce the investment goods. At the end of the day, the household holds the bank deposit as an asset.
+
+This process can be viewed from both the bank's and the household's perspectives. From the bank's viewpoint, it has expanded its balance sheet by creating the loan, and the household now holds the resulting deposit to fund the investment. Alternatively, the household has chosen to hold its savings in the form of a bank deposit, and the bank has utilized this deposit to finance the firm's investment.
+
+The key difference between Case 2 (bank deposit funding) and Case 1 (long-term savings funding) is that in Case 2, the money, in the form of the household's bank deposit, remains in the economy after the settlement process, rather than being extinguished as in Case 1.
+
+To understand why this is the case, consider what would happen if the bank were to withdraw the loan. In order to repay the loan, the firm would need to sell the investment goods back to the household to obtain the necessary funds. This highlights the fact that the bank loan in Case 2 is, for simplicity, an unsecured loan.
+
+Compared to the bond investment in Case 1, the bank loan in Case 2 may be a cheaper source of financing for the firm. However, this approach also introduces its own risks, including the potential for interbank risk.
+
+For the sake of simplicity, we have aggregated all households into a single entity and all banks into a single bank. In reality, the deposit held by the household may not be with the same bank that provided the loan to the firm. Therefore, the interbank network would need to facilitate the flow of the household's deposit to the bank that made the loan. In modern times, the central bank plays an important role in enabling such interbank activities if direct lending between banks were to falter.
+
+In the real world, both bank loans and bond financing are utilized to fund a diverse range of investments. For the purposes of this analysis, we have aggregated these heterogeneous investment activities into a single "investment" category. Some investments may be more suitable for bank loan financing, while others may be better suited for bond financing. Maintaining the appropriate discipline and balance between these funding sources is an important consideration.
+
+## Case 3: Capital Investment Funded by Repo
+
+The previous two cases (Case 1 and Case 2) focused solely on the traditional banking system. Now, we will consider the role of shadow banking, specifically the use of repurchase agreements (repos) to finance the firm's capital investment.
+
+The motivation behind this case is as follows: The firm issues new bonds to finance an investment. In the earlier Case 1, the household had purchased some of these bonds. Now, the household would like to use those bonds as collateral to obtain short-term funding through a repo transaction.
+
+The key function of the repo is to transform the household's long-term bond holdings back into a more liquid, short-term bank deposit-like asset. This allows the household to continue holding the newly issued bonds while also obtaining the necessary funding for the firm's investment.
+
+We will examine two sub-cases to understand how the household can engage in the repo transaction:
+
+Repo with a bank Repo with a money market mutual fund In the first sub-case, the household would conduct the repo directly with a bank. In the second sub-case, the household would use a money market mutual fund as the counterparty for the repo transaction.
+
+### Case 3.1 repo from a bank
+
+```{dot}
+digraph accounts_3_1 {
+    node [shape=plaintext]
+    firm_account[label=<
+    <TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4">
+    <TR><TD ALIGN="CENTER" COLSPAN="2">Firm</TD></TR><HR/>
+    <TR> <TD ALIGN="CENTER" > Asset</TD> <VR/>
+      <TD ALIGN="CENTER">Liability</TD>
+    </TR>
+    <TR><TD ALIGN="CENTER" PORT="firm"> Investment2 +50 </TD> <VR/><TD> bond2 +50</TD></TR>
+    <TR><TD ALIGN="CENTER" PORT="firm">  </TD> <VR/><TD> </TD></TR>
+    <TR><TD ALIGN="CENTER" PORT="firm">  </TD> <VR/><TD> </TD></TR>
+    <TR><TD ALIGN="CENTER" PORT="firm">  </TD> <VR/><TD> </TD></TR>
+        
+    </TABLE>
+    >];
+
+    node [shape=plaintext]
+    household_account[label=<
+    <TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4">
+    <TR><TD ALIGN="CENTER" COLSPAN="2">Household</TD></TR><HR/>
+    <TR> <TD ALIGN="CENTER" > Asset</TD> <VR/>
+      <TD ALIGN="CENTER">Liability</TD>
+    </TR>
+    <TR><TD ALIGN="CENTER" PORT="house" > &#x2460; Deposit +50 </TD> <VR/><TD> repo +50 </TD></TR>
+    <TR><TD ALIGN="CENTER" PORT="house"> &#x2461; Deposit -50 </TD> <VR/><TD> </TD></TR>
+    <TR><TD ALIGN="CENTER" PORT="house"> &#x2461; Bond2 +50 </TD> <VR/><TD> </TD></TR>
+    <TR><TD ALIGN="CENTER" PORT="house">  &#x2462; Deposit +50 </TD> <VR/><TD> </TD></TR>
+    
+    </TABLE>
+    >];
+
+    node [shape=plaintext]
+    bank_account[label=<
+    <TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4">
+    <TR><TD ALIGN="CENTER" COLSPAN="2">Bank</TD></TR><HR/>
+    <TR> <TD ALIGN="CENTER" > Asset</TD> <VR/>
+      <TD ALIGN="CENTER">Liability</TD>
+    </TR>
+    <TR><TD ALIGN="CENTER" PORT="bank"> repo +50 </TD> <VR/><TD> Deposit +50 </TD></TR>
+    <TR><TD ALIGN="CENTER" PORT="bank">  </TD> <VR/><TD> </TD></TR>
+    <TR><TD ALIGN="CENTER" PORT="bank">  </TD> <VR/><TD> </TD></TR>
+    <TR><TD ALIGN="CENTER" PORT="bank">  </TD> <VR/><TD> </TD></TR>
+    
+    </TABLE>
+    >];
+
+    {rank=same; firm_account household_account bank_account}
+
+
+}
+```
+
+In the first sub-case of Case 3, where the household uses a repo transaction with a bank to finance the capital investment, the steps would be as follows:
+
+-   The household obtains a deposit from the bank through the repo transaction, using the previously held bonds as collateral.
+-   The household then uses this deposit to purchase the newly issued bonds (Bond2) from the firm.
+-   Finally, the firm uses the proceeds from selling the bonds to pay the household for the investment inputs (Investment2).
+
+Compared to Case 1 (long-term savings funding) and Case 2 (bank deposit funding), Case 3.1 can be viewed as a combination of the two. The key difference is that the repo loan is secured by the household's bond holdings, rather than being an unsecured loan as in Case 2.
+
+Upon closer examination of the balance sheets, it may appear tempting to simply cancel out the repo loan between the bank and the household, effectively collapsing Case 3.1.1 back to the baseline Case 1 scenario. This could suggest that the repo transaction is just facilitating the long-term funding of the capital investment and does not introduce any additional risks to the financial system.
+
+However, this interpretation would be flawed due to the oversimplified single-household assumption in the model. In the real world, the household using the repo to finance the investment would likely be different from the household holding the deposit that ultimately funds the investment.
+
+This means that the repo holder (the household obtaining the short-term funding) would constantly need access to the deposits held by other households in order to maintain the funding for the capital investment. This dynamic is analogous to the interbank risk highlighted in Case 2, where the flow of funds between different banks was a critical consideration.
+
+### Case 3.2: Repo Funding from a Money Market Mutual Fund (MMMF)
+
+In this sub-case, rather than obtaining the deposit through a repo transaction with a bank, the household instead obtains the deposit from a money market mutual fund (MMMF).
+
+MMFs essentially transforms bank deposits into short-term, highly liquid MMMF shares. The following MMMF balance sheet shows the transformation and how it provides repo loans:
+
+```{dot}
+digraph accounts_3_2 {
+    size="0.5,0.5"; 
+    fixedsize=true;
+    node [shape=plaintext]
+    mmmf_account[label=<
+    <TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4">
+    <TR><TD ALIGN="CENTER" COLSPAN="2">MMMF</TD></TR><HR/>
+    <TR> <TD ALIGN="CENTER" > Asset</TD> <VR/>
+      <TD ALIGN="CENTER">Liability</TD>
+    </TR>
+    <TR><TD ALIGN="CENTER" PORT="mmmf"> Deposit +50 </TD> <VR/><TD> MMMF share +50</TD></TR>
+    <TR><TD ALIGN="CENTER" PORT="mmmf"> Deposit -50 </TD> <VR/><TD> </TD></TR>
+    <TR><TD ALIGN="CENTER" PORT="mmmf"> repo +50 </TD> <VR/><TD> </TD></TR>
+        
+    </TABLE>
+    >];
+
+}
+```
+
+Similar to the previous Case 3.2.1, in this scenario the household uses MMMF shares to finance the repo transaction. However, it's important to note that the underlying funding for the MMMF shares is still bank deposits. Since MMFs do not have the ability to create their own deposits, they must obtain them from other agents within the financial system.
+
+This introduces an extra layer of interconnectedness and potential risk. Not only is there the risk of interbank contagion as highlighted in Case 2, but there is also the risk of the MMMF itself collapsing. If the MMMF were to experience distress, it would need to sell its assets (likely the repo loan to the household) in order to meet its obligations to the household and other investors holding MMMF shares.
+
+This highlights a key difference between bank-based repo financing (Case 3.1) and MMMF-based repo financing (Case 3.2). In the former, the risk is more contained within the traditional banking sector, while in the latter, the collapse of the MMMF can have broader systemic implications by transmitting stress through the shadow banking system.
+
+Finally, let's compare Case 2 (bank loan financing) and Case 3 (repo financing). A key distinction is that repo financing tends to connect the risks of the collateral used in the transaction with the risks of the underlying investment being funded.
+
+In contrast, traditional bank loan financing does not necessarily create this direct linkage between the collateral and the investment.
+
+To illustrate this point, consider the example of mortgage financing. If a mortgage is financed through a traditional bank loan, the failure of the mortgage may not directly affect the value of unrelated assets, such as Treasury securities, that are not directly connected to the mortgage.
+
+However, if the same mortgage is financed through a repo transaction, the risks of the mortgage are now more closely coupled with the risks of the Treasury securities (or other assets) used as collateral for the repo. This means that any stress or losses associated with the mortgage could potentially transmit to the collateral assets, leading to broader contagion effects across the financial system.
+
+## Case 4: Capital Investment Funded by Eurodollars and FX Swaps
+
+Building upon the previous analysis, we can extend our examination of capital investment funding sources to include global, dollar-denominated instruments - specifically, Eurodollars and foreign exchange (FX) swaps.
+
+Eurodollars refer to dollar-denominated deposits held in banks outside of the United States, including the foreign branches of U.S. banks. In many ways, Eurodollars function similarly to traditional bank deposits in terms of providing funding for capital investments.
+
+The key difference, however, is that Eurodollars are not subject to the same reserve requirements as domestic bank deposits. This regulatory distinction can potentially introduce additional risks to the financial system, as Eurodollars operate with less oversight from the U.S. Federal Reserve.
+
+That said, these risks may be somewhat mitigated by broader banking regulations, such as the Basel III framework, which aims to enhance the resilience of the global financial system.
+
+The second global funding source we'll consider is FX swaps. These instruments allow for the transformation of foreign currency loans into dollar-denominated financing for capital investments. Since these foreign currency loans are regulated by other central banks, the U.S. Federal Reserve may have less visibility and control over the associated credit conditions and risks.
+
+# Conclusions
+
+In this article, we have examined and compared the various funding avenues for dollar-denominated capital investments. Within the broader ecosystem of dollar funding, we have demonstrated that the shadow banking system relies on the traditional banking system to function.
+
+However, the introduction of shadow banking instruments, such as repurchase agreements (repos), Eurodollars, and FX swaps, creates an additional layer of complexity and risks. While these shadow banking tools can increase the overall liquidity and lower the financing costs of the financial system, they also have the potential to amplify the fragility of the system.
+
+The key takeaways from our analysis are:
+
+-   The interconnectedness between the traditional banking sector and the shadow banking system is a critical vulnerability. Distress or failures in the shadow banking realm can transmit risks back to the core banking system.
+-   The use of collateral, especially in repo financing, can create tight linkages between the risks of the collateral assets and the risks of the underlying investments. This can lead to broader contagion effects across the financial system.
+-   The relative lack of regulatory oversight and visibility that the central bank has over certain shadow banking activities, such as Eurodollars and foreign currency-denominated loans, poses challenges in monitoring and mitigating systemic risks.
