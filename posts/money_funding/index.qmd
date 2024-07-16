@@ -3,7 +3,7 @@ title: "Money Funding"
 author: "Gang Ma"
 date: "2024-07-16"
 categories: [news, code, analysis]
-image: "dollars.jpg"
+image: "funding.jpg"
 ---
 
 # Introduction
