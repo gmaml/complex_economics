@@ -45,13 +45,13 @@ Due to space limitations, we've only scratched the surface of money issues in co
 
 ## AI developments
 
-Complexity sciences, as a multidisciplinary field, have been inspired by AI research since their inception. For example, Herbert Simon's concept of bounded rationality and John Holland's genetic algorithms have been extensively used in complexity economics. Following this historical pattern, it is natural to expect that recent developments in AI will affect complexity economics at various levels.
+Complexity sciences, as a multidisciplinary field, have been inspired by AI research since their inception. For example, Herbert Simon's concept of bounded rationality[@Simon1984] and John Holland's genetic algorithms [@Holland2010] have been extensively used in complexity economics. Following this historical pattern, it is natural to expect that recent developments in AI will affect complexity economics at various levels.
 
 One major recent development in AI is deep learning[@LeCun2015; @Goodfellow2016; @Prince2023; @Bishop2024], a type of machine learning models which achieve great performance using with large training datasets. These advancements are accompanied by improvements in computer hardware and software to manage and process large datasets. Complexity economics will undoubtedly benefit from such developments as it evolves to create higher-fidelity economic simulation models. Among deep learning models, deep graph neural networks are especially promising, as they can help complexity economics better understand complex network dynamics, another salient feature of complexity economics models.
 
 Despite deep learning's remarkable success in natural language processing, text analysis, image recognition, and video processing, it faces several significant challenges. These include difficulties in adapting to new tasks, lack of robustness to unforeseen data, requirements for large training datasets, and limited causal understanding.
 
-Probabilistic machine learning, another strand of AI research [@Murphy2023;@Sayed2022], aims to address some of these limitations. However, these models still require technical breakthroughs to efficiently process large amounts of data.
+Probabilistic machine learning, another strand of AI research [@Murphy2023;@Sayed2022], aims to address some of these limitations. However, these models still require technical breakthroughs to efficiently process large amounts of data. I will have a post about how probabilistic machine learning may be useful for complexity economics with money.
 
 Understanding causality is a crucial aspect of scientific discovery. In recent decades, causality has been systematically studied through multidisciplinary efforts spanning AI/machine learning, statistics, and economics [@Pearl2022; @Imbens2015; @Heckman2022]. Monetary policy serves as a prime example of how policymakers intervene in a system to enhance its performance. Complexity economics has the potential to incorporate these advancements into its toolbox, leading to more robust economic models.
 
