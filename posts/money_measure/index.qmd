@@ -10,4 +10,4 @@ Money measurement
 
 The following link is a streamlit app to show money measurement.
 
-<https://appapps-fbapmcvtmwbdfxncsxvgq3.streamlit.app/>
+[https://appapps-fbapmcvtmwbdfxncsxvgq3.streamlit.app](https://appapps-fbapmcvtmwbdfxncsxvgq3.streamlit.app/){.uri}

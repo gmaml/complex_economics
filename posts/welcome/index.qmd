@@ -1,5 +1,5 @@
 ---
-title: "Complexity Economics with money production"
+title: "Complexity Economics with money"
 author: "Gang Ma"
 date: "2024-07-15"
 categories: [news]
